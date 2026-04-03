@@ -1,0 +1,28 @@
+# Data and artifacts (large / local)
+data/
+!data/.gitkeep
+checkpoints/
+!checkpoints/.gitkeep
+outputs/
+!outputs/.gitkeep
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.so
+.venv/
+venv/
+env/
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Experiment tracking (optional)
+wandb/

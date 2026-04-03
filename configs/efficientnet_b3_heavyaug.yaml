@@ -1,0 +1,23 @@
+extends: "configs/base.yaml"
+
+experiment_name: "efficientnet_b3_heavyaug"
+
+model:
+  architecture: "efficientnet_b3"
+  pretrained: true
+  dropout: 0.3
+
+augmentation:
+  horizontal_flip_prob: 0.5
+  rotation_degrees: 20
+  color_jitter_brightness: 0.2
+  color_jitter_contrast: 0.2
+  color_jitter_saturation: 0.15
+  color_jitter_hue: 0.05
+  random_erase_prob: 0.15
+
+training:
+  batch_size: 16
+  epochs: 20
+  lr: 0.0002
+  weight_decay: 0.02

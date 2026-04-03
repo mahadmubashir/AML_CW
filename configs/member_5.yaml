@@ -1,0 +1,15 @@
+extends: "configs/base.yaml"
+
+experiment_name: "member_5_vit_l16"
+
+model:
+  architecture: "vit_l_16"
+  freeze_backbone_epochs: 4
+
+data:
+  image_size: 224
+
+training:
+  batch_size: 12
+  epochs: 14
+  lr: 8.0e-05

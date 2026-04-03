@@ -1,0 +1,11 @@
+extends: "configs/base.yaml"
+
+experiment_name: "member_2_efficientnet_b2"
+
+model:
+  architecture: "efficientnet_b2"
+
+training:
+  batch_size: 24
+  epochs: 18
+  lr: 0.00025

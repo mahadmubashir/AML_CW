@@ -1,0 +1,76 @@
+# Shared defaults for DR training. Other configs can use:
+#   extends: "configs/base.yaml"
+# and override only the sections they need.
+#
+# Schema reference:
+#   paths          — data_root, labels_csv, image_extension, checkpoint_dir, outputs_dir
+#   reproducibility — seed, train_val_split, num_workers, device ("auto"|"cuda"|"mps"|"cpu")
+#   data           — image_size, num_classes
+#   augmentation   — training-time transforms (validation uses resize + normalize only)
+#   model          — architecture, pretrained, dropout, freeze_backbone_epochs
+#   training       — batch_size, epochs, lr, optimizer, weight_decay, scheduler, early_stopping_patience,
+#                    mixed_precision, gradient_clip_norm, save_best_metric
+#   loss           — type ("cross_entropy"), class_weights ("auto"|null|list)
+#   logging        — print_every
+#   inference      — optional test_dir, sample_submission_csv for Kaggle-style test
+
+experiment_name: "baseline"
+
+paths:
+  data_root: "data/train"
+  labels_csv: "data/trainLabels.csv"
+  image_extension: ".jpeg"
+  checkpoint_dir: "checkpoints"
+  outputs_dir: "outputs"
+  test_dir: null
+  sample_submission_csv: null
+
+reproducibility:
+  seed: 42
+  train_val_split: 0.2
+  num_workers: 4
+  device: "auto"
+
+data:
+  image_size: 224
+  num_classes: 5
+
+augmentation:
+  horizontal_flip_prob: 0.5
+  vertical_flip_prob: 0.0
+  rotation_degrees: 15
+  color_jitter_brightness: 0.1
+  color_jitter_contrast: 0.1
+  color_jitter_saturation: 0.1
+  color_jitter_hue: 0.02
+  random_erase_prob: 0.0
+
+model:
+  architecture: "efficientnet_b0"
+  pretrained: true
+  dropout: 0.2
+  freeze_backbone_epochs: 0
+
+training:
+  batch_size: 32
+  epochs: 15
+  lr: 0.0003
+  optimizer: "adamw"
+  weight_decay: 0.01
+  scheduler: "cosine"
+  scheduler_step_size: 7
+  scheduler_gamma: 0.1
+  early_stopping_patience: 5
+  mixed_precision: true
+  gradient_clip_norm: null
+  save_best_metric: "val_kappa"
+
+loss:
+  type: "cross_entropy"
+  class_weights: "auto"
+
+logging:
+  print_every: 50
+
+inference:
+  test_batch_size: 32
