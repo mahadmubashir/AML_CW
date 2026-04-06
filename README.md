@@ -34,30 +34,22 @@ Coursework repository for **Applied Machine Learning**: train CNN / ViT models o
 
 3. **Run training**
 
-   Open [`notebooks/dr_training.ipynb`](notebooks/dr_training.ipynb). Set **`CONFIG_PATH`** (first configuration cell) to your YAML file under `configs/`, then **Run All**.
+   Open [`notebooks/dr_training.ipynb`](notebooks/dr_training.ipynb) and run cells top-to-bottom.
 
-   Each group member should copy an example config to `configs/member_<yourname>.yaml`, adjust hyperparameters and `model.architecture`, and point **`CONFIG_PATH`** to that file—no need to edit training code.
+   Your experiment settings are defined in a single **Config** code cell inside the notebook (architecture, preprocessing toggles, loss toggles, sampling toggles, hyperparameters, and paths). Each group member should change only that config cell.
 
 ## Repository layout
 
-- `configs/` — Experiment YAML files (`paths`, `model`, `training`, `augmentation`, `loss`, …).
 - `notebooks/dr_training.ipynb` — Single notebook: loader, split, augmentations, model, train/val, metrics (including quadratic weighted kappa).
 - `data/` — Local dataset (gitignored except `.gitkeep`).
 - `checkpoints/` — Saved weights (gitignored).
 - `outputs/` — Plots / submission CSVs (gitignored).
-
-## Config workflow (five collaborators)
-
-1. Duplicate `configs/member_1.yaml` → `configs/member_<you>.yaml`.
-2. Change only YAML fields: `experiment_name`, `model.architecture`, `training.*`, `augmentation.*`, etc.
-3. In the notebook, set `CONFIG_PATH = "configs/member_<you>.yaml"` (path relative to repository root).
-4. Commit the YAML file; avoid merge conflicts by not editing the same notebook lines—only change `CONFIG_PATH` locally if needed.
 
 ### Supported `model.architecture` values (torchvision)
 
 These names match `torchvision.models` constructors directly:
 
 - **EfficientNet:** `efficientnet_b0`, `efficientnet_b1`, `efficientnet_b2`, `efficientnet_b3`, `efficientnet_b4`, `efficientnet_b5`, `efficientnet_b6`, `efficientnet_b7`
-- **ViT:** `vit_b_16`, `vit_l_16`, `vit_h_14` (use an input size appropriate to the variant; `vit_h_14` often expects a larger `data.image_size`—see torchvision docs)
+- **ViT:** `vit_b_16`, `vit_l_16`, `vit_h_14`
 
 If your label CSV uses different column names, normalize them to **`image`** and **`level`** (0–4), or adjust the notebook where the CSV is read.
