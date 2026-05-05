@@ -1,8 +1,10 @@
 # Data and artifacts (large / local)
 data/
 !data/.gitkeep
-checkpoints/
+# allow specific checkpoints to be committed; ignore the rest
+checkpoints/*
 !checkpoints/.gitkeep
+!checkpoints/mobilenetv3_large_na02153_best.pt
 outputs/
 !outputs/.gitkeep
 
@@ -26,4 +28,3 @@ env/
 
 # Experiment tracking (optional)
 wandb/
-!checkpoints/mobilenetv3_large_na02153_best.pt
