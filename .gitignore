@@ -26,3 +26,4 @@ env/
 
 # Experiment tracking (optional)
 wandb/
+!checkpoints/mobilenetv3_large_na02153_best.pt
