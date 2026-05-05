@@ -1,39 +1,48 @@
-# Data and artifacts (large / local)
+# data + checkpoints — large, only specific files allowed
 data/
 !data/.gitkeep
-# allow specific checkpoints to be committed; ignore the rest
+
 checkpoints/*
 !checkpoints/.gitkeep
 !checkpoints/mobilenetv3_large_na02153_best.pt
-outputs/
+
+# outputs/ — strict whitelist, only supervisor-facing artifacts
+outputs/*
 !outputs/.gitkeep
+!outputs/run1_baseline.log
+!outputs/run2_lr_low.log
+!outputs/run4_focal_loss.log
+!outputs/mobilenetv3_large_na02153_confusion.png
+!outputs/mobilenetv3_large_run2_lr1e-4_confusion.png
+!outputs/mobilenetv3_large_run4_focal_confusion.png
 
-# Jupyter
+# python + jupyter
 .ipynb_checkpoints/
-
-# Python
 __pycache__/
 *.py[cod]
-*$py.class
-.Python
-*.so
+*.bak
+
+# environments
 .venv/
 venv/
 env/
 
-# IDE / OS
+# editors + os
 .DS_Store
 .idea/
 .vscode/
 
-# Experiment tracking (optional)
+# experiment trackers
 wandb/
 
-# whitelist specific report deliverables inside outputs/
-!outputs/
-outputs/*
-!outputs/.gitkeep
-!outputs/*.log
-!outputs/*.png
-!outputs/*.csv
-!outputs/*_metrics.json
+# logs folder (debugging — never tracked)
+logs/
+
+# scripts internal logs
+scripts/auto_push.log
+scripts/*.bak
+
+# notebook backups
+notebooks/*.bak
+notebooks/*.backup
+notebooks/*_executed_cpu.ipynb
