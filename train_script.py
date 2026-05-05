@@ -64,7 +64,7 @@ IMAGENET_STD = (0.229, 0.224, 0.225)
 # 2) Config — edit only this cell per experiment.
 
 # --- Paths (use external drive absolute paths if needed) ---
-EXPERIMENT_NAME = "mobilenetv3_large_na02153"
+EXPERIMENT_NAME = os.environ.get("EXPERIMENT_NAME", "mobilenetv3_large_na02153")
 DATA_ROOT = "data/train"             # folder containing images
 LABELS_CSV = "data/trainLabels.csv"  # CSV with columns: image, level
 IMAGE_EXTENSION = ".jpeg"
@@ -86,7 +86,7 @@ COLOR_JITTER = dict(brightness=0.1, contrast=0.1, saturation=0.1, hue=0.02)
 RANDOM_ERASE_PROB = 0.0
 
 # --- Fundus preprocessing (reference repo style; heavy) ---
-USE_PREPROCESSING = False
+USE_PREPROCESSING = os.environ.get("USE_PREPROCESSING", "0") == "1"
 PREPROCESS = dict(
     crop_black=True,
     circular_mask=True,
@@ -108,7 +108,7 @@ FREEZE_BACKBONE_EPOCHS = 0
 # --- Training ---
 BATCH_SIZE = 32
 EPOCHS = 15
-LR = 3e-4
+LR = float(os.environ.get("LR_OVERRIDE", 3e-4))
 OPTIMIZER = "adamw"  # "adamw" | "sgd"
 WEIGHT_DECAY = 1e-2
 SCHEDULER = "cosine"  # "cosine" | "step" | "none"
@@ -124,7 +124,7 @@ CLASS_WEIGHTS_AUTO = True
 WEIGHTED_SAMPLING = False
 
 LABEL_SMOOTHING = 0.0  # 0.0 disables label smoothing
-USE_FOCAL_LOSS = False
+USE_FOCAL_LOSS = os.environ.get("USE_FOCAL_LOSS", "0") == "1"
 FOCAL_GAMMA = 2.0
 FOCAL_ALPHA = None  # set e.g. 0.25 or keep None
 
