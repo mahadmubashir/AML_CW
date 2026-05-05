@@ -28,3 +28,12 @@ env/
 
 # Experiment tracking (optional)
 wandb/
+
+# whitelist specific report deliverables inside outputs/
+!outputs/
+outputs/*
+!outputs/.gitkeep
+!outputs/*.log
+!outputs/*.png
+!outputs/*.csv
+!outputs/*_metrics.json
