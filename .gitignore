@@ -1,12 +1,58 @@
-# data + checkpoints — large, only specific files allowed
+# === data folders — never push, never even stage ===
+# 'data' (no slash) catches the symlink. 'data/' catches a real folder.
+data
 data/
+!data/.gitkeep
+
+# === model checkpoints — large binaries, never push ===
+checkpoints/
 outputs/checkpoints/
 outputs/baseline/checkpoints/
+*.pt
+*.pth
 
-# environments
+# === training outputs — large or environment-specific ===
+logs/
+outputs/logs/
+wandb/
+
+# === environment-specific run scripts — local only ===
+scripts/
+
+# === private local-only folder ===
+local_only/
+
+# === Python ===
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.ipynb_checkpoints/
+
+# === environments ===
 venv/
-.env/
+.venv/
+.env
+.env.*
+!.env.example
 
-# editors + os
+# === editors + os ===
 .DS_Store
 .vscode/
+.idea/
+Thumbs.db
+
+# === backups + temp files ===
+*.bak
+*.backup
+*.tmp
+*.swp
+*~
+
+# === smoke test files — private, never push ===
+notebooks/dr_smoke_test*.ipynb
+notebooks/*_executed_cpu.ipynb
+
+# === bundles and archives ===
+*.bundle
+*.zip.*
