@@ -1,7 +1,7 @@
 # data + checkpoints — large, only specific files allowed
 data/
 outputs/checkpoints/
-
+outputs/baseline/checkpoints/
 
 # environments
 venv/
