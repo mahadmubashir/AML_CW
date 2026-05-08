@@ -5,6 +5,7 @@ outputs/baseline/checkpoints/
 
 # environments
 venv/
+.venv/
 .env/
 
 # editors + os
