@@ -10,4 +10,5 @@ venv/
 
 # editors + os
 .DS_Store
-.vscode/
+.vscode/*.pt
+*.pt
