@@ -56,3 +56,16 @@ notebooks/*_executed_cpu.ipynb
 # === bundles and archives ===
 *.bundle
 *.zip.*
+
+# === training run artefacts — local only, never push ===
+# any per-run output folder under outputs/ (catches mobilenetv3_large_*, exp*, etc)
+outputs/*/
+# log files anywhere
+*.log
+*.err
+*.out
+# === training scripts — environment-specific, local only ===
+mobilenet_train.py
+run_data_preprocessing.py
+resume_data_preprocessing.py
+submit_*.sh
