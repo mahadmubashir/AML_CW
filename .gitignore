@@ -69,3 +69,11 @@ mobilenet_train.py
 run_data_preprocessing.py
 resume_data_preprocessing.py
 submit_*.sh
+
+# === local-only helper scripts (one-shot patchers + runners) ===
+patch_run_*.py
+preflight_check.py
+run_exp*.py
+
+# === notebook backups with unix-timestamp suffix ===
+*.ipynb.bak.*
