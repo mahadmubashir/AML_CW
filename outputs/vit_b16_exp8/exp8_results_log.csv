@@ -1,3 +1,4 @@
 timestamp,use_focal_loss,balance_method,phase1_epochs,phase2_epochs,phase1_lr,phase2_lr,batch_size,weight_decay,grad_clip,early_stopping_patience,p1_best_epoch,p1_best_val_loss,p2_best_epoch,p2_best_val_loss,test_qwk,test_accuracy,test_macro_f1,f1_no_dr,f1_mild,f1_moderate,f1_severe,f1_proliferative
 2026-05-10T02:30:46.868384,True,"FocalLoss(alpha=class_weights,gamma=2)",30,30,1e-05,1e-06,16,0.01,1.0,5,23,0.9572620050920484,6,0.8268164957773303,0.3334,0.1744,0.2943,0.0482,0.1356,0.3615,0.4326,0.4938
 2026-05-10T03:30:57.215485,True,"FocalLoss(alpha=class_weights,gamma=2)",30,30,0.0001,1e-05,16,0.01,1.0,5,20,0.8604625621108838,4,0.8177145615073009,0.4189,0.1441,0.2993,0.0169,0.1389,0.3802,0.393,0.5673
+2026-05-10T17:26:38.068497,True,"FocalLoss(alpha=class_weights,gamma=2)",30,30,0.0001,5e-06,16,0.03,1.0,CosineAnnealingLR,LinearWarmup+CosineDecay,3,5,10,0.8685865155146343,5,0.8623100166278154,0.2998,0.1828,0.3127,0.0483,0.1364,0.369,0.424,0.5856
