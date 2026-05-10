@@ -2,6 +2,7 @@
 data/
 outputs/checkpoints/
 outputs/baseline/checkpoints/
+outputs/
 
 # environments
 venv/
