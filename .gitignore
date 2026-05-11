@@ -23,6 +23,10 @@ outputs/experiment_11_mild_severe_refined/best_model_exp11.pt
 .venv/
 .env/
 
+# temporary editor files
+*.swp
+*.swo
+*.save
 # editors + os
 .DS_Store
 .vscode/
