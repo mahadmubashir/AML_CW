@@ -2,9 +2,14 @@
 data/
 outputs/checkpoints/
 outputs/baseline/checkpoints/
-
+outputs/deit_b16/checkpoints
+outputs/deit3_b16_exp1a/checkpoints/deit3_b16_exp1a_best.pt
+outputs/deit3_b16_exp1b/checkpoints/deit3_b16_exp1b_best.pt
+outputs/deit3_b16_exp2/checkpoints/deit3_b16_exp2_best.pt
+outputs/deit3_b16_exp2_balanced/checkpoints/deit3_b16_exp2_balanced_best.pt
+outputs/deit3_b16_exp2_improvements/checkpoints/deit3_b16_exp2_improvements_best.pt
 # environments
-venv/
+.venv/
 .env/
 
 # editors + os
