@@ -84,3 +84,7 @@ inspect_section_m.py
 fix_runs_6_to_9.py
 strip_remaining_noise_v2.py
 diagnose_run9_noise.py
+clean_section_20_dashes.py
+clean_section_20_reasoning.py
+strip_all_comments.py
+find_triple_quoted.py
