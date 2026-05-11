@@ -16,3 +16,5 @@ scikit-image>=0.22.0
 scipy>=1.10.0
 seaborn>=0.13.0
 utils>=0.1.0
+timm>=0.9.0 
+tqdm
