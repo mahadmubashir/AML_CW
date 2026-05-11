@@ -1,0 +1,6 @@
+Class,Precision,Recall,F1-score,Support
+No DR,0.861,0.855,0.858,3872
+Mild,0.161,0.202,0.179,366
+Moderate,0.518,0.489,0.503,794
+Severe,0.461,0.405,0.431,131
+Proliferative DR,0.667,0.604,0.634,106

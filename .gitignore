@@ -1,14 +1,25 @@
 # data + checkpoints — large, only specific files allowed
 data/
 outputs/checkpoints/
-outputs/baseline/checkpoints/
+outputs/baseline/checkpoints
 outputs/deit_b16/checkpoints
-outputs/deit3_b16_exp1a/checkpoints/deit3_b16_exp1a_best.pt
-outputs/deit3_b16_exp1b/checkpoints/deit3_b16_exp1b_best.pt
-outputs/deit3_b16_exp2/checkpoints/deit3_b16_exp2_best.pt
-outputs/deit3_b16_exp2_balanced/checkpoints/deit3_b16_exp2_balanced_best.pt
-outputs/deit3_b16_exp2_improvements/checkpoints/deit3_b16_exp2_improvements_best.pt
-# environments
+outputs/deit3_b16_exp1a/checkpoints
+outputs/deit3_b16_exp1b/checkpoints
+outputs/deit3_b16_exp2/checkpoints
+outputs/deit3_b16_exp2_balanced/checkpoints
+outputs/deit3_b16_exp2_improvements/checkpoints
+outputs/deit3_b16_exp2_new_balanced_configs/checkpoints
+outputs/deit3_b16_exp3/checkpoints
+outputs/deit3_b16_exp4/checkpoints
+outputs/deit3_b16_exp5/checkpoints
+outputs/deit3_b16_exp6/checkpoints
+outputs/deit3_b16_exp7/checkpoints
+outputs/deit3_b16_exp8/checkpoints
+outputs/deit3_b16_exp9/checkpoints
+outputs/deit3_b16_exp10_mild_two_phase/checkpoints
+outputs/experiment_11_mild_severe_refined/checkpoints
+
+outputs/experiment_11_mild_severe_refined/best_model_exp11.pt
 .venv/
 .env/
 

@@ -1,0 +1,10 @@
+Metric,Experiment 9 Test Result
+Accuracy,0.7384702979692541
+Macro Precision,0.5333575464017827
+Macro Recall (Balanced Accuracy),0.510915283631826
+Macro F1,0.5208930513455508
+Weighted Precision,0.7465855320000723
+Weighted Recall,0.7384702979692541
+Weighted F1,0.7422142453386743
+Quadratic Weighted Kappa (QWK),0.6470060300369354
+Mild F1  ← key minority metric,0.17896009673518742

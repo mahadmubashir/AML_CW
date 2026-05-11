@@ -1,0 +1,6 @@
+Class,Average Precision (AP)
+No DR,0.8885
+Mild,0.1167
+Moderate,0.489
+Severe,0.4074
+Proliferative,0.6407

@@ -1,0 +1,6 @@
+Class,ROC AUC
+No DR,0.803
+Mild,0.6173
+Moderate,0.8001
+Severe,0.8048
+Proliferative,0.892
