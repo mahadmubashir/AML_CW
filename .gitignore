@@ -82,3 +82,5 @@ run_exp*.py
 add_section_m.py
 inspect_section_m.py
 fix_runs_6_to_9.py
+strip_remaining_noise_v2.py
+diagnose_run9_noise.py
