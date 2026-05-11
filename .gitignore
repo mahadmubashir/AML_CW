@@ -11,6 +11,7 @@ outputs/vit_b16_exp5/checkpoints
 outputs/vit_b16_exp6/checkpoints
 outputs/vit_b16_exp7/checkpoints
 outputs/vit_b16_exp8/checkpoints
+outputs/vit_b16_final/checkpoints
 
 # environments
 venv/
