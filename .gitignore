@@ -97,3 +97,7 @@ build_ablation_xlsx_v2.py
 outputs/ablation_full_metrics.csv
 outputs/ablation_full_metrics.xlsx
 strip_summary_listing.py
+replace_scorecam_with_eigencam.py
+drop_section5.py
+custom_cam_section5.py
+fix_all_cam_targets.py
