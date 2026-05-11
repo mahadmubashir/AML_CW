@@ -88,3 +88,11 @@ clean_section_20_dashes.py
 clean_section_20_reasoning.py
 strip_all_comments.py
 find_triple_quoted.py
+build_explainability_nb.py
+inspect_explainability.py
+build_telegram_message.py
+build_ablation_csv.py
+build_ablation_xlsx.py
+build_ablation_xlsx_v2.py
+outputs/ablation_full_metrics.csv
+outputs/ablation_full_metrics.xlsx
