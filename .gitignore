@@ -77,3 +77,7 @@ run_exp*.py
 
 # === notebook backups with unix-timestamp suffix ===
 *.ipynb.bak.*
+
+# build-time helper scripts (kept on dev machine, not deliverable)
+add_section_m.py
+inspect_section_m.py
